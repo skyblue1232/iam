@@ -868,6 +868,10 @@ SSAFY 소개 페이지 제작을 통해 기본 프롬프트 구조를 검증한 
   <img src="images/Image1.png" alt="나폴나폴 포트폴리오 썸네일" width="100%" />
 </p>
 
+<p align="center">
+  <img src="images/DarkImage1.png" alt="나폴나폴 포트폴리오 썸네일" width="100%" />
+</p>
+
 
 <br>
 
