@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="소통은 부드럽게, 해결은 끝까지. SW 개발자 고민균의 포트폴리오입니다."
+  />
+  <meta property="og:title" content="나폴나폴 | 고민균 포트폴리오" />
+  <meta
+    property="og:description"
+    content="나비처럼 나의 매력을 나폴나폴 퍼트리는 개발자 포트폴리오"
+  />
+  <meta property="og:image" content="../images/Thum.png" />
+  <title>나폴나폴 | 고민균 포트폴리오</title>
+
+  <meta name="theme-color" content="#f7f9ff" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/script.js" defer></script>
+</head>
+
+<body data-page="home">
+
+  <!-- 스크롤 진행률 -->
+  <div
+    class="scroll-progress"
+    data-scroll-progress
+    role="progressbar"
+    aria-label="페이지 스크롤 진행률"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    aria-valuenow="0"
+  >
+    <span class="scroll-progress-bar"></span>
+  </div>
+
+  <!-- 배경 파티클 -->
+  <canvas
+    class="particle-canvas"
+    data-particle-canvas
+    aria-hidden="true"
+  ></canvas>
+
+  <!-- 커스텀 마우스 커서 -->
+  <div class="custom-cursor custom-cursor-dot" data-cursor-dot aria-hidden="true"></div>
+  <div class="custom-cursor custom-cursor-ring" data-cursor-ring aria-hidden="true"></div>
+
+  <a class="skip-link" href="#main-content">본문으로 바로가기</a>
+
+
+  <!-- 모든 페이지에서 동일하게 사용하는 네비게이션 -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#home" aria-label="나폴나폴 홈">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>나폴나폴</span>
+      </a>
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="메뉴 열기"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="navigation-area">
+        <nav
+          class="primary-navigation"
+          id="primary-navigation"
+          aria-label="주요 메뉴"
+        >
+          <a href="index.html" class="is-current" aria-current="page" data-i18n="nav.home">홈</a>
+          <a href="projects.html" data-i18n="nav.projects">프로젝트</a>
+          <a href="journey.html" data-i18n="nav.journey">여정</a>
+          <a href="index.html#contact" data-i18n="nav.contact">연락</a>
+        </nav>
+
+        <div class="navigation-actions" aria-label="화면 설정">
+          <button
+            class="utility-button language-toggle"
+            type="button"
+            data-language-toggle
+            aria-label="영어로 보기"
+            aria-pressed="false"
+          >
+            <span class="language-current">KO</span>
+            <span aria-hidden="true">/</span>
+            <span class="language-next">EN</span>
+          </button>
+
+          <button
+            class="utility-button theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="다크 모드로 변경"
+            aria-pressed="false"
+          >
+            <span class="theme-icon theme-icon-light" aria-hidden="true">☀</span>
+            <span class="theme-icon theme-icon-dark" aria-hidden="true">☾</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main id="main-content">
+    <!-- HERO -->
+    <section class="hero section" id="home">
+      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrowhead" data-i18n="hero.role">SW 개발자 고민균</p>
+
+          <h1>
+            <span data-i18n="hero.line1">소통은 부드럽게,</span><br />
+            <span class="text-gradient" data-i18n="hero.line2">
+              해결은 끝까지.
+            </span>
+          </h1>
+
+          <p class="hero-description" data-i18n="hero.description">
+            작은 문제도 그냥 넘기지 않고 여러 가능성을 검토하며,
+            개인의 경험을 팀의 가치로 확장합니다.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="projects.html">
+              <span data-i18n="hero.projects">대표 프로젝트 보기</span>
+              <span aria-hidden="true">↘</span>
+            </a>
+
+            <a class="button button-secondary" href="#contact">
+              <span data-i18n="hero.contact">연락하기</span>
+            </a>
+          </div>
+
+          <ul class="quick-links" aria-label="외부 링크">
+            <li>
+              <a
+                href="https://github.com/skyblue1232"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://my-blog-min.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Tech Blog
+              </a>
+            </li>
+            <li>
+              <a href="mailto:skybluekmg@gmail.com">Email</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="나폴나폴 브랜드 비주얼">
+          <div class="butterfly-scene" aria-hidden="true">
+            <svg
+              class="butterfly butterfly-main"
+              viewBox="0 0 220 150"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient id="wingGradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#d9c8ff" />
+                  <stop offset="55%" stop-color="#89b7ff" />
+                  <stop offset="100%" stop-color="#4778f5" />
+                </linearGradient>
+              </defs>
+              <ellipse cx="110" cy="77" rx="12" ry="42" fill="#456ad9" />
+              <path
+                d="M98 68C60 9 13 23 28 72c11 35 48 28 70 11z"
+                fill="url(#wingGradient)"
+              />
+              <path
+                d="M122 68c38-59 85-45 70 4-11 35-48 28-70 11z"
+                fill="url(#wingGradient)"
+              />
+              <path
+                d="M99 87c-35 1-49 39-19 47 22 6 32-19 30-39z"
+                fill="#8faefc"
+              />
+              <path
+                d="M121 87c35 1 49 39 19 47-22 6-32-19-30-39z"
+                fill="#8faefc"
+              />
+              <path
+                d="M105 36c-10-18-22-22-28-19"
+                fill="none"
+                stroke="#456ad9"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+              <path
+                d="M115 36c10-18 22-22 28-19"
+                fill="none"
+                stroke="#456ad9"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+            </svg>
+
+            <div class="flight-path"></div>
+          </div>
+
+          <div class="floating-card code-card">
+            <div class="window-dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <pre><code><span>const</span> developer = {
+  attitude: <b>"끝을 보는 집요함"</b>,
+  decision: <b>"근거 중심"</b>,
+  teamwork: <b>"가치를 나누는 협업"</b>
+};</code></pre>
+          </div>
+
+          <div class="floating-card mini-card mini-card-one">
+            <span class="mini-icon">⌁</span>
+            <div>
+              <strong>Deep Diver</strong>
+              <small>Root Cause First</small>
+            </div>
+          </div>
+
+          <div class="floating-card mini-card mini-card-two">
+            <span class="mini-icon">↻</span>
+            <div>
+              <strong>Iterate</strong>
+              <small>Learn & Improve</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-guide" aria-hidden="true">
+        <span>SCROLL</span>
+        <i></i>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">01. ABOUT</p>
+          <h2>30초 안에 이해되는<br />나만의 포트폴리오</h2>
+          <p>
+            기술을 나열하기보다 어떤 문제를 발견했고, 어떤 근거로 해결했으며,
+            그 과정에서 팀에 어떤 가치를 남겼는지를 보여줍니다.
+          </p>
+        </div>
+
+        <div class="overview-grid">
+          <article class="overview-card overview-card-large reveal">
+            <span class="card-label">WHO I AM</span>
+            <h3>부드러운 유연함과<br />집요한 책임감의 조화</h3>
+            <p>
+              사용자 경험을 기준으로 문제를 정의하고, 서비스 규모가 커져도
+              유지할 수 있는 상태와 UI 구조를 고민합니다. 동료의 의견을
+              경청하면서도 작은 문제를 임시방편으로 덮지 않고 근본 원인을
+              찾을 때까지 파고듭니다.
+            </p>
+
+            <div class="profile-meta">
+              <div>
+                <span>희망 직무</span>
+                <strong>SW 개발자</strong>
+              </div>
+              <div>
+                <span>관심 분야</span>
+                <strong>Frontend · Server · Data · AI</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="overview-card reveal">
+            <span class="card-number">01</span>
+            <h3>문제 정의</h3>
+            <p>무엇을 고쳐야 하는지보다 왜 문제가 발생했는지 먼저 확인합니다.</p>
+          </article>
+
+          <article class="overview-card reveal">
+            <span class="card-number">02</span>
+            <h3>대안 검토</h3>
+            <p>조건과 제약을 기준으로 여러 해결 방법을 비교합니다.</p>
+          </article>
+
+          <article class="overview-card reveal">
+            <span class="card-number">03</span>
+            <h3>해결과 기록</h3>
+            <p>해결한 경험이 팀의 다음 판단에 활용되도록 기록하고 공유합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="section section-soft" id="values">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">02. CORE VALUES</p>
+          <h2>제가 문제를 해결하는 방식</h2>
+        </div>
+
+        <div class="values-grid">
+          <article class="value-card reveal">
+            <div class="value-icon">✓</div>
+            <span>Deep Diver</span>
+            <h3>끝을 보는 집요함</h3>
+            <p>
+              오류의 표면만 수정하지 않고 로그, 흐름, 환경을 따라가며
+              문제의 근본 원인을 찾습니다.
+            </p>
+          </article>
+
+          <article class="value-card reveal">
+            <div class="value-icon">↻</div>
+            <span>Iterate</span>
+            <h3>반복적인 개선</h3>
+            <p>
+              한 번의 성공에 만족하지 않고 구조와 사용 흐름을 다시 점검해
+              더 나은 방식으로 개선합니다.
+            </p>
+          </article>
+
+          <article class="value-card reveal">
+            <div class="value-icon">◇</div>
+            <span>Reason First</span>
+            <h3>근거 중심의 판단</h3>
+            <p>
+              익숙함이나 유행보다 프로젝트의 조건과 대안을 비교해
+              기술 선택의 이유를 설명합니다.
+            </p>
+          </article>
+
+          <article class="value-card reveal">
+            <div class="value-icon">✎</div>
+            <span>Sincere Pioneer</span>
+            <h3>가치를 남기는 실행</h3>
+            <p>
+              발견한 문제를 직접 개선하고 트러블슈팅과 가이드로 남겨
+              팀의 반복 비용을 줄입니다.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container skill-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow">03. SKILLS</p>
+          <h2>기술은 목적이 아니라<br />문제를 해결하는 도구입니다.</h2>
+          <p>
+            React와 TypeScript를 중심으로 사용자 흐름과 상태를 구조화하고,
+            유지보수 가능한 UI 아키텍처와 안정적인 서비스 경험을 고민합니다.
+          </p>
+        </div>
+
+        <div class="skill-board reveal">
+          <div class="skill-row">
+            <span>Frontend</span>
+            <div>
+              <strong>React</strong>
+              <strong>Next.js</strong>
+              <strong>TypeScript</strong>
+              <strong>JavaScript</strong>
+              <strong>HTML / CSS</strong>
+              <strong>Tailwind CSS</strong>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <span>Architecture</span>
+            <div>
+              <strong>Vite</strong>
+              <strong>pnpm</strong>
+              <strong>Monorepo</strong>
+              <strong>FSD</strong>
+              <strong>Design System</strong>
+              <strong>PWA</strong>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <span>State & API</span>
+            <div>
+              <strong>TanStack Query</strong>
+              <strong>Axios</strong>
+              <strong>Zustand</strong>
+              <strong>React Hook Form</strong>
+              <strong>Zod</strong>
+              <strong>WebSocket</strong>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <span>Data & Mobile</span>
+            <div>
+              <strong>Python</strong>
+              <strong>Scikit-learn</strong>
+              <strong>PCA</strong>
+              <strong>SVM</strong>
+              <strong>Kotlin</strong>
+              <strong>Android</strong>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <span>Collaboration</span>
+            <div>
+              <strong>Git</strong>
+              <strong>GitHub</strong>
+              <strong>Figma</strong>
+              <strong>Code Review</strong>
+              <strong>Documentation</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME PROJECT PREVIEW -->
+    <section class="section section-dark project-preview-section" id="project-preview">
+      <div class="container">
+        <div class="section-heading section-heading-light reveal">
+          <p class="eyebrow">04. SELECTED PROJECTS</p>
+          <h2>프로젝트에서 확인하는<br />실제 문제 해결 과정</h2>
+          <p>
+            대표 프로젝트의 전체 내용은 프로젝트 페이지에서 확인할 수 있습니다.
+          </p>
+        </div>
+
+        <div class="project-preview-grid">
+          <a class="project-preview-card reveal" href="projects.html#compasser">
+            <span>01</span>
+            <h3>Compasser</h3>
+            <p>모노레포와 디자인 시스템으로 구성한 카페 리워드 서비스</p>
+            <strong>자세히 보기 ↗</strong>
+          </a>
+
+          <a class="project-preview-card reveal" href="projects.html#geulda">
+            <span>02</span>
+            <h3>글다</h3>
+            <p>부천의 명소와 여행 엽서를 연결하는 AI 관광 플랫폼</p>
+            <strong>자세히 보기 ↗</strong>
+          </a>
+
+          <a class="project-preview-card reveal" href="projects.html#loopy">
+            <span>03</span>
+            <h3>LOOPy</h3>
+            <p>카페 방문을 단골 루틴으로 연결하는 디지털 리워드 플랫폼</p>
+            <strong>자세히 보기 ↗</strong>
+          </a>
+
+          <a class="project-preview-card reveal" href="projects.html#catxi">
+            <span>04</span>
+            <h3>CATXI</h3>
+            <p>실시간 채팅 기반 대학생 택시 동승자 매칭 서비스</p>
+            <strong>자세히 보기 ↗</strong>
+          </a>
+        </div>
+
+        <div class="section-more-action reveal">
+          <a class="button button-primary" href="projects.html">
+            모든 프로젝트 보기
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MORE ABOUT -->
+    <section class="section section-soft" id="more-about">
+      <div class="container more-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">05. MORE ABOUT ME</p>
+          <h2>혼자 해결하는 것보다<br />함께 성장하는 방식을 선택합니다.</h2>
+        </div>
+
+        <div class="quote-card reveal">
+          <p>
+            “문제를 해결한 경험은 개인의 기억으로 끝내지 않고,
+            다음 사람이 더 빠르게 판단할 수 있는 기록으로 남겨야 한다고 생각합니다.”
+          </p>
+          <div>
+            <span>협업 가치관</span>
+            <strong>Share the value</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-box reveal">
+        <div class="contact-intro">
+          <p class="eyebrow">06. CONTACT</p>
+          <h2>
+            함께 새로운 가치를<br />
+            나폴나폴 퍼트려 볼까요?
+          </h2>
+          <p>
+            프로젝트와 기술에 관해 더 이야기하고 싶다면
+            편한 방법으로 연락해 주세요.
+          </p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-info-list">
+            <a class="contact-info-item" href="tel:01040767060">
+              <span class="contact-info-label">MOBILE</span>
+              <div>
+                <strong>010-4076-7060</strong>
+                <small>전화 걸기</small>
+              </div>
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              class="contact-info-item"
+              href="https://www.linkedin.com/in/your-id/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="contact-info-label">LINKEDIN</span>
+              <div>
+                <strong>LinkedIn Profile</strong>
+                <small>경력과 활동 확인하기</small>
+              </div>
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <div class="contact-info-item">
+              <span class="contact-info-label">HOME</span>
+              <div>
+                <strong>02-XXX-XXXX</strong>
+                <small>자택 연락처</small>
+              </div>
+              <span aria-hidden="true">—</span>
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <a
+              class="button button-primary button-large"
+              href="mailto:skybluekmg@gmail.com"
+            >
+              이메일 보내기
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <button
+              class="copy-email"
+              type="button"
+              data-email="skybluekmg@gmail.com"
+            >
+              <span>skybluekmg@gmail.com</span>
+              <strong>복사</strong>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="index.html#home">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>나폴나폴</span>
+        </a>
+        <p data-i18n="footer.description">
+          나비처럼 나의 매력을 나폴나폴 퍼트리는 포트폴리오
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links">
+          <a
+            href="https://github.com/skyblue1232"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://my-blog-min.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Tech Blog
+          </a>
+          <a href="mailto:skybluekmg@gmail.com">Email</a>
+        </div>
+
+        <p>© <span id="current-year"></span> 고민균. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 이스터에그 -->
+  <button
+    class="easter-egg-butterfly"
+    type="button"
+    data-easter-egg
+    aria-label="숨겨진 나비 찾기"
+    title="나비를 눌러 보세요"
+  >
+    🦋
+  </button>
+
+  <aside
+    class="easter-egg-panel"
+    data-easter-egg-panel
+    aria-live="polite"
+    hidden
+  >
+    <strong>나폴나폴 이스터에그 발견!</strong>
+    <p>작은 문제도 그냥 지나치지 않는 관찰력을 확인했습니다.</p>
+    <button type="button" data-easter-egg-close>닫기</button>
+  </aside>
+
+  <button class="back-to-top" type="button" aria-label="맨 위로 이동">
+    ↑
+  </button>
+
+  <div class="toast" role="status" aria-live="polite">
+    이메일 주소를 복사했습니다.
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="고민균의 대표 프론트엔드 프로젝트와 문제 해결 과정을 소개합니다."
+  />
+  <meta property="og:title" content="프로젝트 | 나폴나폴" />
+  <meta
+    property="og:description"
+    content="Compasser, 글다, LOOPy, CATXI 프로젝트"
+  />
+  <meta property="og:image" content="../images/Thum.png" />
+  <title>프로젝트 | 나폴나폴</title>
+
+  <meta name="theme-color" content="#f7f9ff" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/script.js" defer></script>
+</head>
+
+<body data-page="projects">
+
+  <!-- 스크롤 진행률 -->
+  <div
+    class="scroll-progress"
+    data-scroll-progress
+    role="progressbar"
+    aria-label="페이지 스크롤 진행률"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    aria-valuenow="0"
+  >
+    <span class="scroll-progress-bar"></span>
+  </div>
+
+  <!-- 배경 파티클 -->
+  <canvas
+    class="particle-canvas"
+    data-particle-canvas
+    aria-hidden="true"
+  ></canvas>
+
+  <!-- 커스텀 마우스 커서 -->
+  <div class="custom-cursor custom-cursor-dot" data-cursor-dot aria-hidden="true"></div>
+  <div class="custom-cursor custom-cursor-ring" data-cursor-ring aria-hidden="true"></div>
+
+  <a class="skip-link" href="#main-content">본문으로 바로가기</a>
+
+
+  <!-- 모든 페이지에서 동일하게 사용하는 네비게이션 -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#home" aria-label="나폴나폴 홈">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>나폴나폴</span>
+      </a>
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="메뉴 열기"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="navigation-area">
+        <nav
+          class="primary-navigation"
+          id="primary-navigation"
+          aria-label="주요 메뉴"
+        >
+          <a href="index.html" data-i18n="nav.home">홈</a>
+          <a href="projects.html" class="is-current" aria-current="page" data-i18n="nav.projects">프로젝트</a>
+          <a href="journey.html" data-i18n="nav.journey">여정</a>
+          <a href="index.html#contact" data-i18n="nav.contact">연락</a>
+        </nav>
+
+        <div class="navigation-actions" aria-label="화면 설정">
+          <button
+            class="utility-button language-toggle"
+            type="button"
+            data-language-toggle
+            aria-label="영어로 보기"
+            aria-pressed="false"
+          >
+            <span class="language-current">KO</span>
+            <span aria-hidden="true">/</span>
+            <span class="language-next">EN</span>
+          </button>
+
+          <button
+            class="utility-button theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="다크 모드로 변경"
+            aria-pressed="false"
+          >
+            <span class="theme-icon theme-icon-light" aria-hidden="true">☀</span>
+            <span class="theme-icon theme-icon-dark" aria-hidden="true">☾</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main id="main-content">
+    <section class="subpage-hero section">
+      <div class="container subpage-hero-inner reveal">
+        <p class="eyebrow">PROJECT ARCHIVE</p>
+        <h1>
+          결과보다 과정에서 드러나는<br />
+          <span class="text-gradient">문제 해결의 방식</span>
+        </h1>
+        <p>
+          서비스의 목적, 프론트엔드 역할, 구조와 핵심 구현을 중심으로
+          프로젝트를 정리했습니다.
+        </p>
+
+        <nav class="page-anchor-navigation" aria-label="프로젝트 바로가기">
+          <a href="#compasser">Compasser</a>
+          <a href="#geulda">글다</a>
+          <a href="#loopy">LOOPy</a>
+          <a href="#catxi">CATXI</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="projects">
+      <div class="container">
+        <div class="project-list">
+          <!-- 01. Compasser -->
+          <article class="project-card reveal" id="compasser">
+            <div class="project-visual project-visual-compasser">
+              <div class="architecture-board">
+                <div class="architecture-header">
+                  <span></span><span></span><span></span>
+                  <strong>Compasser Architecture</strong>
+                </div>
+
+                <div class="architecture-apps">
+                  <div class="architecture-node architecture-app">
+                    <span>APP</span>
+                    <strong>Customer</strong>
+                  </div>
+                  <div class="architecture-node architecture-app">
+                    <span>APP</span>
+                    <strong>Owner</strong>
+                  </div>
+                </div>
+
+                <div class="architecture-connector">
+                  <span></span><span></span>
+                </div>
+
+                <div class="architecture-packages">
+                  <div class="architecture-node architecture-package">
+                    <span>PACKAGE</span>
+                    <strong>UI</strong>
+                  </div>
+                  <div class="architecture-node architecture-package">
+                    <span>PACKAGE</span>
+                    <strong>API</strong>
+                  </div>
+                  <div class="architecture-node architecture-package">
+                    <span>PACKAGE</span>
+                    <strong>Utils</strong>
+                  </div>
+                </div>
+
+                <div class="design-system-badge">
+                  <span>◆</span>
+                  <div>
+                    <strong>Design System</strong>
+                    <small>Reusable Components</small>
+                  </div>
+                </div>
+
+                <div class="monorepo-badge">pnpm · Monorepo</div>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-topline">
+                <span>01</span>
+                <p>MONOREPO · DESIGN SYSTEM</p>
+              </div>
+
+              <h2>Compasser</h2>
+
+              <p class="project-summary">
+                카페별 랜덤박스 결제와 QR 기반 적립 기능을 제공하는 서비스의
+                프론트엔드 아키텍처를 모노레포로 구성한 프로젝트입니다.
+              </p>
+
+              <dl class="project-detail-list">
+                <div>
+                  <dt>구조</dt>
+                  <dd>
+                    도메인 기반 모노레포를 적용해 여러 앱과 공통 패키지를
+                    분리했습니다.
+                  </dd>
+                </div>
+                <div>
+                  <dt>공통화</dt>
+                  <dd>
+                    디자인 시스템을 별도 패키지로 구축해 UI 일관성과
+                    재사용성을 높였습니다.
+                  </dd>
+                </div>
+                <div>
+                  <dt>기능</dt>
+                  <dd>
+                    카페별 랜덤박스 결제와 QR 기반 적립 사용자 흐름을 제공합니다.
+                  </dd>
+                </div>
+              </dl>
+
+              <div class="project-tags">
+                <span>TypeScript</span>
+                <span>pnpm</span>
+                <span>Turborepo</span>
+                <span>Monorepo</span>
+                <span>Design System</span>
+                <span>QR</span>
+              </div>
+
+              <a
+                class="text-link"
+                href="https://github.com/CUK-Compasser/FE"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub에서 살펴보기
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 02. 글다 -->
+          <article class="project-card project-card-reverse reveal" id="geulda">
+            <div class="project-visual project-visual-tourism">
+              <div class="tourism-scene">
+                <div class="map-card">
+                  <div class="map-route"></div>
+                  <span class="map-pin map-pin-one"></span>
+                  <span class="map-pin map-pin-two"></span>
+                  <span class="map-pin map-pin-three"></span>
+                  <div class="map-label">
+                    <span>BUCHEON</span>
+                    <strong>AI 추천 여행 코스</strong>
+                  </div>
+                </div>
+
+                <div class="postcard postcard-main">
+                  <div class="postcard-image">
+                    <span>TRAVEL POSTCARD</span>
+                  </div>
+                  <div class="postcard-content">
+                    <strong>오늘의 여행 엽서</strong>
+                    <small>여행의 순간을 기록하고 수집해요</small>
+                  </div>
+                </div>
+
+                <div class="postcard postcard-small">
+                  <span class="postcard-icon">✦</span>
+                  <strong>명소 · 문화 · 행사</strong>
+                  <small>부천의 새로운 장소를 발견해요</small>
+                </div>
+
+                <div class="tourism-ai-badge">
+                  <span>AI</span>
+                  <div>
+                    <strong>Personal Course</strong>
+                    <small>맞춤 여행 코스 추천</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-topline">
+                <span>02</span>
+                <p>TOURISM · AI PLATFORM</p>
+              </div>
+
+              <h2>글다</h2>
+
+              <p class="project-summary">
+                부천의 명소와 행사, 추천 코스를 한 번에 탐색하고
+                여행지 엽서를 수집할 수 있는 AI 기반 관광 플랫폼입니다.
+              </p>
+
+              <dl class="project-detail-list">
+                <div>
+                  <dt>역할</dt>
+                  <dd>
+                    3인 프론트엔드 팀의 일원으로 서비스 화면과 사용자 흐름
+                    구현에 참여했습니다.
+                  </dd>
+                </div>
+                <div>
+                  <dt>구조</dt>
+                  <dd>
+                    Next.js Page Router와 TypeScript를 사용하고 src 기반
+                    FSD 구조를 적용했습니다.
+                  </dd>
+                </div>
+                <div>
+                  <dt>안정성</dt>
+                  <dd>
+                    Axios 공통 인스턴스와 401 토큰 재발급,
+                    중복 요청 Race Condition 방지 구조를 사용했습니다.
+                  </dd>
+                </div>
+              </dl>
+
+              <div class="project-tags">
+                <span>Next.js</span>
+                <span>TypeScript</span>
+                <span>FSD</span>
+                <span>Tailwind CSS</span>
+                <span>Axios</span>
+                <span>AI Tourism</span>
+              </div>
+
+              <a
+                class="text-link"
+                href="https://github.com/geulDa/FE"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub에서 살펴보기
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 03. LOOPy -->
+          <article class="project-card reveal" id="loopy">
+            <div class="project-visual project-visual-loopy">
+              <div class="loopy-scene">
+                <div class="loopy-title-card">
+                  <span>LOCAL CAFE REWARD</span>
+                  <strong>LOOPy</strong>
+                  <small>방문이 단골 루틴으로 이어지도록</small>
+                </div>
+
+                <div class="stamp-card">
+                  <div class="stamp-card-header">
+                    <div>
+                      <span>DIGITAL STAMP</span>
+                      <strong>오늘도 한 잔 적립</strong>
+                    </div>
+                    <span class="coffee-icon">☕</span>
+                  </div>
+
+                  <div class="stamp-grid">
+                    <span class="stamp-filled">✓</span>
+                    <span class="stamp-filled">✓</span>
+                    <span class="stamp-filled">✓</span>
+                    <span class="stamp-filled">✓</span>
+                    <span></span>
+                    <span></span>
+                  </div>
+
+                  <div class="stamp-progress"><i></i></div>
+                  <small>2개의 스탬프를 더 모으면 리워드를 받을 수 있어요.</small>
+                </div>
+
+                <div class="loopy-qr-card">
+                  <div class="fake-qr"></div>
+                  <div>
+                    <strong>QR 적립</strong>
+                    <small>스캔하고 바로 적립</small>
+                  </div>
+                </div>
+
+                <div class="loopy-notification">
+                  <span>●</span>
+                  <div>
+                    <strong>이벤트 알림</strong>
+                    <small>자주 가는 카페의 새 소식</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-topline">
+                <span>03</span>
+                <p>LOCAL CAFE · REWARD PLATFORM</p>
+              </div>
+
+              <h2>LOOPy</h2>
+
+              <p class="project-summary">
+                종이 스탬프를 디지털로 통합하고 카페와 고객을 연결해
+                우연한 방문을 단골 루틴으로 바꾸는 디지털 리워드 플랫폼입니다.
+              </p>
+
+              <dl class="project-detail-list">
+                <div>
+                  <dt>역할</dt>
+                  <dd>
+                    프론트엔드 팀원으로 고객 앱과 사장님 웹의 사용자 경험
+                    구현에 참여했습니다.
+                  </dd>
+                </div>
+                <div>
+                  <dt>기능</dt>
+                  <dd>
+                    QR 스탬프 적립, 카카오맵 탐색, FCM 이벤트 알림,
+                    회원 인증 흐름을 제공합니다.
+                  </dd>
+                </div>
+                <div>
+                  <dt>구조</dt>
+                  <dd>
+                    고객·사장님별 UI를 분리하고 PWA 설치와 반응형 화면을
+                    지원하도록 구성했습니다.
+                  </dd>
+                </div>
+              </dl>
+
+              <div class="project-tags">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Vite</span>
+                <span>TanStack Query</span>
+                <span>Kakao Map</span>
+                <span>FCM</span>
+                <span>PWA</span>
+              </div>
+
+              <a
+                class="text-link"
+                href="https://github.com/Organization-LOOPy/LOOPy-FE"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub에서 살펴보기
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 04. CATXI -->
+          <article class="project-card project-card-reverse reveal" id="catxi">
+            <div class="project-visual project-visual-chat">
+              <div class="phone-mockup">
+                <div class="phone-top"></div>
+                <div class="chat-header">
+                  <span class="chat-profile"></span>
+                  <div>
+                    <strong>택시 동승 채팅</strong>
+                    <small>3명이 참여 중입니다.</small>
+                  </div>
+                </div>
+
+                <div class="chat-line chat-line-left"></div>
+                <div class="chat-line chat-line-right"></div>
+                <div class="chat-line chat-line-left short"></div>
+                <div class="chat-input"></div>
+              </div>
+
+              <div class="catxi-location-card">
+                <span>출발</span>
+                <strong>숭실대학교</strong>
+                <i></i>
+                <span>도착</span>
+                <strong>서울역</strong>
+              </div>
+
+              <div class="catxi-status-badge">
+                <span></span>
+                실시간 연결 중
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-topline">
+                <span>04</span>
+                <p>WEB · REAL-TIME CHAT</p>
+              </div>
+
+              <h2>CATXI</h2>
+
+              <p class="project-summary">
+                대학생이 택시 동승자를 찾고 실시간으로 소통할 수 있도록 만든
+                모바일 중심 택시 동승자 매칭 서비스입니다.
+              </p>
+
+              <dl class="project-detail-list">
+                <div>
+                  <dt>문제</dt>
+                  <dd>
+                    STOMP WebSocket 연결과 인증 헤더 처리 과정에서
+                    403 오류가 발생했습니다.
+                  </dd>
+                </div>
+                <div>
+                  <dt>해결</dt>
+                  <dd>
+                    CONNECT·SUBSCRIBE 단계의 인증 흐름과 연결 수명주기를
+                    재정리했습니다.
+                  </dd>
+                </div>
+                <div>
+                  <dt>구현</dt>
+                  <dd>
+                    채팅 UI, 메시지 상태 관리, 히스토리 조회,
+                    PWA 기반 모바일 화면을 구현했습니다.
+                  </dd>
+                </div>
+              </dl>
+
+              <div class="project-tags">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Vite</span>
+                <span>TanStack Query</span>
+                <span>STOMP</span>
+                <span>WebSocket</span>
+                <span>PWA</span>
+              </div>
+
+              <a
+                class="text-link"
+                href="https://github.com/Team-Catxi/Catxi_FrontEnd"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub에서 살펴보기
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-navigation-section">
+      <div class="container page-next-card reveal">
+        <div>
+          <p class="eyebrow">NEXT PAGE</p>
+          <h2>프로젝트 이후의 성장 과정도 확인해 보세요.</h2>
+        </div>
+        <a class="button button-primary" href="journey.html">
+          여정 페이지로 이동
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="index.html#home">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>나폴나폴</span>
+        </a>
+        <p data-i18n="footer.description">
+          나비처럼 나의 매력을 나폴나폴 퍼트리는 포트폴리오
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links">
+          <a
+            href="https://github.com/skyblue1232"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://my-blog-min.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Tech Blog
+          </a>
+          <a href="mailto:skybluekmg@gmail.com">Email</a>
+        </div>
+
+        <p>© <span id="current-year"></span> 고민균. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 이스터에그 -->
+  <button
+    class="easter-egg-butterfly"
+    type="button"
+    data-easter-egg
+    aria-label="숨겨진 나비 찾기"
+    title="나비를 눌러 보세요"
+  >
+    🦋
+  </button>
+
+  <aside
+    class="easter-egg-panel"
+    data-easter-egg-panel
+    aria-live="polite"
+    hidden
+  >
+    <strong>나폴나폴 이스터에그 발견!</strong>
+    <p>작은 문제도 그냥 지나치지 않는 관찰력을 확인했습니다.</p>
+    <button type="button" data-easter-egg-close>닫기</button>
+  </aside>
+
+  <button class="back-to-top" type="button" aria-label="맨 위로 이동">
+    ↑
+  </button>
+
+  <div class="toast" role="status" aria-live="polite">
+    이메일 주소를 복사했습니다.
+  </div>
+
+</body>
+</html>
