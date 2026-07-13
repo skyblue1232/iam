@@ -2,8 +2,10 @@
 
  **"나비처럼 나의 매력을 나폴나폴 퍼트리는 개발자 고민균의 포트폴리오 페이지"**
 
-<p align="start">
-  <a href="#code-generation-prompt">🧩 제작 과정 및 프롬프트 설계 바로가기</a>
+<p align="left">
+  <a href="#prompt-design">🧩 제작 과정 및 프롬프트 설계 바로가기</a>
+  &nbsp;|&nbsp;
+  <a href="#result-screen">🖼️ 결과 화면 바로가기</a>
 </p>
 
 <p align="center">
@@ -438,6 +440,8 @@ Deep Diver, Iterate, Reason First, Sincere Pioneer라는 역량이 단순 문구
 <br>
 <br>
 
+<a id="prompt-design"></a>
+
 # 17. 제작 과정 및 프롬프트 설계 🧩
 
 나폴나폴 포트폴리오는 AI에게 곧바로 웹페이지 제작을 요청하는 방식이 아니라, **기획 단계와 구현 단계를 분리하는 방식**으로 제작하였습니다.
@@ -853,6 +857,10 @@ SSAFY를 처음 접하는 사용자가 교육 과정의 특징, 지원 대상, �
 - 수정 요청을 한 항목씩 적용할 수 있는 구조인지 확인
 
 SSAFY 소개 페이지 제작을 통해 기본 프롬프트 구조를 검증한 뒤, 같은 방식을 개인 포트폴리오인 나폴나폴에 적용하였습니다.
+
+<br>
+
+<a id="result-screen"></a>
 
 ### 20.3 결과 화면
 
