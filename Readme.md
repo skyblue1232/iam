@@ -1,6 +1,10 @@
 # 나폴나폴 서비스 기획서
 
-> **나비처럼 나의 매력을 나폴나폴 퍼트리는 개발자 고민균의 포트폴리오 페이지**
+ **"나비처럼 나의 매력을 나폴나폴 퍼트리는 개발자 고민균의 포트폴리오 페이지"**
+
+<p align="start">
+  <a href="#code-generation-prompt">🧩 제작 과정 및 프롬프트 설계 바로가기</a>
+</p>
 
 <p align="center">
   <img src="images/Thum.png" alt="나폴나폴 포트폴리오 썸네일" width="100%" />
